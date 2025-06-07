@@ -51,10 +51,14 @@ Alternatively, using docker:
   "mcpServers": {
     "MapboxServer": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "mapbox-mcp-server"],
-      "env": {
-        "MAPBOX_ACCESS_TOKEN": "YOUR_TOKEN"
-      }
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "MAPBOX_ACCESS_TOKEN=YOUR_TOKEN",
+        "mapbox-mcp-server"
+      ]
     }
   }
 }
